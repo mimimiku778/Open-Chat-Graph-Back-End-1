@@ -4,3 +4,4 @@ users.htpasswd
 .htaccess
 app/Config/Shadow/StringCryptor.php
 app/Config/Shadow/DatabaseConfig.php
+app/Config/AppConfig.php
