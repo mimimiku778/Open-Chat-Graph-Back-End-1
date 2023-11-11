@@ -5,3 +5,5 @@ users.htpasswd
 app/Config/Shadow/StringCryptor.php
 app/Config/Shadow/DatabaseConfig.php
 app/Config/AppConfig.php
+app/Config/ConfigJson.json
+app/Config/ConfigJson.php
