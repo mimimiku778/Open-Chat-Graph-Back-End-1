@@ -34,6 +34,7 @@ class ComposerStaticInitb99d262e1b8550ce1d6fd4bec6885e85
             'Symfony\\Contracts\\HttpClient\\' => 29,
             'Symfony\\Component\\Mime\\' => 23,
             'Symfony\\Component\\HttpClient\\' => 29,
+            'Symfony\\Component\\Finder\\' => 25,
             'Symfony\\Component\\DomCrawler\\' => 29,
             'Symfony\\Component\\CssSelector\\' => 30,
             'Symfony\\Component\\BrowserKit\\' => 29,
@@ -43,7 +44,9 @@ class ComposerStaticInitb99d262e1b8550ce1d6fd4bec6885e85
         'P' => 
         array (
             'Psr\\Log\\' => 8,
+            'Psr\\Http\\Message\\' => 17,
             'Psr\\Container\\' => 14,
+            'PhpZip\\' => 7,
             'PhpParser\\' => 10,
         ),
         'M' => 
@@ -103,6 +106,10 @@ class ComposerStaticInitb99d262e1b8550ce1d6fd4bec6885e85
         array (
             0 => __DIR__ . '/..' . '/symfony/http-client',
         ),
+        'Symfony\\Component\\Finder\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/finder',
+        ),
         'Symfony\\Component\\DomCrawler\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/dom-crawler',
@@ -127,9 +134,17 @@ class ComposerStaticInitb99d262e1b8550ce1d6fd4bec6885e85
         array (
             0 => __DIR__ . '/..' . '/psr/log/src',
         ),
+        'Psr\\Http\\Message\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/http-message/src',
+        ),
         'Psr\\Container\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/container/src',
+        ),
+        'PhpZip\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/nelexa/zip/src',
         ),
         'PhpParser\\' => 
         array (

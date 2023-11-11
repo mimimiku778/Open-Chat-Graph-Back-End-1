@@ -5,7 +5,7 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '4ae16eda8e203f246bfee27be6f1259c541a18c9',
+        'reference' => '9115756bccdb0ea5a84a2107c9a4a03653368f6d',
         'name' => 'mimimiku778/minimalcms',
         'dev' => true,
     ),
@@ -43,7 +43,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '4ae16eda8e203f246bfee27be6f1259c541a18c9',
+            'reference' => '9115756bccdb0ea5a84a2107c9a4a03653368f6d',
             'dev_requirement' => false,
         ),
         'myclabs/deep-copy' => array(
@@ -54,6 +54,15 @@
             'aliases' => array(),
             'reference' => '7284c22080590fb39f2ffa3e9057f10a4ddd0e0c',
             'dev_requirement' => true,
+        ),
+        'nelexa/zip' => array(
+            'pretty_version' => '4.0.2',
+            'version' => '4.0.2.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../nelexa/zip',
+            'aliases' => array(),
+            'reference' => '88a1b6549be813278ff2dd3b6b2ac188827634a7',
+            'dev_requirement' => false,
         ),
         'nikic/php-parser' => array(
             'pretty_version' => 'v4.17.1',
@@ -162,6 +171,15 @@
             'provided' => array(
                 0 => '1.0',
             ),
+        ),
+        'psr/http-message' => array(
+            'pretty_version' => '2.0',
+            'version' => '2.0.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../psr/http-message',
+            'aliases' => array(),
+            'reference' => '402d35bcb92c70c026d1a6a9883f06b2ead23d71',
+            'dev_requirement' => false,
         ),
         'psr/log' => array(
             'pretty_version' => '3.0.0',
@@ -351,6 +369,15 @@
             'aliases' => array(),
             'reference' => '3fdd2a3d5fdc363b2e8dbf817f9726a4d013cbd1',
             'dev_requirement' => true,
+        ),
+        'symfony/finder' => array(
+            'pretty_version' => 'v6.3.5',
+            'version' => '6.3.5.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/finder',
+            'aliases' => array(),
+            'reference' => 'a1b31d88c0e998168ca7792f222cbecee47428c4',
+            'dev_requirement' => false,
         ),
         'symfony/http-client' => array(
             'pretty_version' => 'v6.3.8',

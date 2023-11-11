@@ -10,7 +10,7 @@ use App\Views\MetaTags;
 class IndexPageController
 {
     public function index(ConfigJson $config, MetaTags $_metaTags)
-    {   
+    {
         $text = $config->topPageText;
         $link = $config->footerLink;
 

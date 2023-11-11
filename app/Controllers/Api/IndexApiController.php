@@ -8,6 +8,6 @@ class IndexApiController
 {
     public function index()
     {
-        return response(['message' => 'Hello World']);
+        pre_var_dump($_FILES);
     }
 }

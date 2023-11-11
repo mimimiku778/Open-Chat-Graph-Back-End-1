@@ -11,4 +11,6 @@ Route::path('image/store@post')
     ->matchNum('imageSize', min: 0, max: 1000)
     ->fails(redirect('image'));
 
-Route::run(VerifyCsrfToken::class);
+Route::path('@get@post');
+
+Route::run();
