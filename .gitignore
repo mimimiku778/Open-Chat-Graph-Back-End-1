@@ -2,3 +2,4 @@
 app/Config
 users.htpasswd
 .htaccess
+app/Config/Shadow/DatabaseConfig.php
