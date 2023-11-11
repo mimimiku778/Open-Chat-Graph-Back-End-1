@@ -7,8 +7,14 @@ namespace Composer\Autoload;
 class ComposerStaticInitb99d262e1b8550ce1d6fd4bec6885e85
 {
     public static $files = array (
-        '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         'ec07570ca5a812141189b1fa81503674' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert/Functions.php',
+        '6e3fae29631ef280660b3cdad06f25a8' => __DIR__ . '/..' . '/symfony/deprecation-contracts/function.php',
+        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
+        'e69f7f6ee287b969198c3c9d6777bd38' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/bootstrap.php',
+        '25072dd6e2470089de65ae7bf11d3109' => __DIR__ . '/..' . '/symfony/polyfill-php72/bootstrap.php',
+        '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
+        'f598d06aa772fa33d905e87be6398fb1' => __DIR__ . '/..' . '/symfony/polyfill-intl-idn/bootstrap.php',
+        '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         '32ce0fe7e283c4ab2501f48c49b8b765' => __DIR__ . '/../..' . '/shared/MimimalCMS_Config.php',
         '072636c41bf6e1d1798641cf4f6d69ca' => __DIR__ . '/../..' . '/shared/MimimalCMS_Enums.php',
         'c855a0512e67c28b49c6128ad77e1863' => __DIR__ . '/../..' . '/shared/MimimalCMS_ExceptionHandler.php',
@@ -19,12 +25,34 @@ class ComposerStaticInitb99d262e1b8550ce1d6fd4bec6885e85
     public static $prefixLengthsPsr4 = array (
         'S' => 
         array (
+            'Symfony\\Polyfill\\Php72\\' => 23,
+            'Symfony\\Polyfill\\Mbstring\\' => 26,
+            'Symfony\\Polyfill\\Intl\\Normalizer\\' => 33,
+            'Symfony\\Polyfill\\Intl\\Idn\\' => 26,
+            'Symfony\\Polyfill\\Ctype\\' => 23,
+            'Symfony\\Contracts\\Service\\' => 26,
+            'Symfony\\Contracts\\HttpClient\\' => 29,
+            'Symfony\\Component\\Mime\\' => 23,
+            'Symfony\\Component\\HttpClient\\' => 29,
+            'Symfony\\Component\\DomCrawler\\' => 29,
+            'Symfony\\Component\\CssSelector\\' => 30,
+            'Symfony\\Component\\BrowserKit\\' => 29,
             'Shared\\' => 7,
             'Shadow\\' => 7,
         ),
         'P' => 
         array (
+            'Psr\\Log\\' => 8,
+            'Psr\\Container\\' => 14,
             'PhpParser\\' => 10,
+        ),
+        'M' => 
+        array (
+            'Masterminds\\' => 12,
+        ),
+        'G' => 
+        array (
+            'Goutte\\' => 7,
         ),
         'D' => 
         array (
@@ -39,6 +67,54 @@ class ComposerStaticInitb99d262e1b8550ce1d6fd4bec6885e85
     );
 
     public static $prefixDirsPsr4 = array (
+        'Symfony\\Polyfill\\Php72\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-php72',
+        ),
+        'Symfony\\Polyfill\\Mbstring\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
+        ),
+        'Symfony\\Polyfill\\Intl\\Normalizer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer',
+        ),
+        'Symfony\\Polyfill\\Intl\\Idn\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-intl-idn',
+        ),
+        'Symfony\\Polyfill\\Ctype\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-ctype',
+        ),
+        'Symfony\\Contracts\\Service\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/service-contracts',
+        ),
+        'Symfony\\Contracts\\HttpClient\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/http-client-contracts',
+        ),
+        'Symfony\\Component\\Mime\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/mime',
+        ),
+        'Symfony\\Component\\HttpClient\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/http-client',
+        ),
+        'Symfony\\Component\\DomCrawler\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/dom-crawler',
+        ),
+        'Symfony\\Component\\CssSelector\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/css-selector',
+        ),
+        'Symfony\\Component\\BrowserKit\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/browser-kit',
+        ),
         'Shared\\' => 
         array (
             0 => __DIR__ . '/../..' . '/shared',
@@ -47,9 +123,25 @@ class ComposerStaticInitb99d262e1b8550ce1d6fd4bec6885e85
         array (
             0 => __DIR__ . '/../..' . '/shadow',
         ),
+        'Psr\\Log\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/log/src',
+        ),
+        'Psr\\Container\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/container/src',
+        ),
         'PhpParser\\' => 
         array (
             0 => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser',
+        ),
+        'Masterminds\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/masterminds/html5/src',
+        ),
+        'Goutte\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fabpot/goutte/Goutte',
         ),
         'Doctrine\\Instantiator\\' => 
         array (
@@ -71,6 +163,7 @@ class ComposerStaticInitb99d262e1b8550ce1d6fd4bec6885e85
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'Normalizer' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/Resources/stubs/Normalizer.php',
         'PHPUnit\\Exception' => __DIR__ . '/..' . '/phpunit/phpunit/src/Exception.php',
         'PHPUnit\\Framework\\ActualValueIsNotAnObjectException' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Exception/ActualValueIsNotAnObjectException.php',
         'PHPUnit\\Framework\\Assert' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert.php',
