@@ -8,11 +8,11 @@
         }
     ],
     "require": {
-        "nelexa/zip": "^4.0"
+        "nelexa/zip": "^4.0",
+        "fabpot/goutte": "^4.0.3"
     },
     "require-dev": {
-        "phpunit/phpunit": "^9.6.7",
-        "fabpot/goutte": "^4.0.3"
+        "phpunit/phpunit": "^9.6.7"
     },
     "autoload": {
         "psr-4": {

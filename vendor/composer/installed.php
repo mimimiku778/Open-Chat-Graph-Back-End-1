@@ -5,7 +5,7 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '9115756bccdb0ea5a84a2107c9a4a03653368f6d',
+        'reference' => 'bc5d4755fc96d5b307bfd933050745bf272ea54e',
         'name' => 'mimimiku778/minimalcms',
         'dev' => true,
     ),
@@ -26,7 +26,7 @@
             'install_path' => __DIR__ . '/../fabpot/goutte',
             'aliases' => array(),
             'reference' => 'e3f28671c87a48a0f13ada1baea0d95acc2138c3',
-            'dev_requirement' => true,
+            'dev_requirement' => false,
         ),
         'masterminds/html5' => array(
             'pretty_version' => '2.8.1',
@@ -35,7 +35,7 @@
             'install_path' => __DIR__ . '/../masterminds/html5',
             'aliases' => array(),
             'reference' => 'f47dcf3c70c584de14f21143c55d9939631bc6cf',
-            'dev_requirement' => true,
+            'dev_requirement' => false,
         ),
         'mimimiku778/minimalcms' => array(
             'pretty_version' => 'dev-main',
@@ -43,7 +43,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '9115756bccdb0ea5a84a2107c9a4a03653368f6d',
+            'reference' => 'bc5d4755fc96d5b307bfd933050745bf272ea54e',
             'dev_requirement' => false,
         ),
         'myclabs/deep-copy' => array(
@@ -92,13 +92,13 @@
             'dev_requirement' => true,
         ),
         'php-http/async-client-implementation' => array(
-            'dev_requirement' => true,
+            'dev_requirement' => false,
             'provided' => array(
                 0 => '*',
             ),
         ),
         'php-http/client-implementation' => array(
-            'dev_requirement' => true,
+            'dev_requirement' => false,
             'provided' => array(
                 0 => '*',
             ),
@@ -164,10 +164,10 @@
             'install_path' => __DIR__ . '/../psr/container',
             'aliases' => array(),
             'reference' => 'c71ecc56dfe541dbd90c5360474fbc405f8d5963',
-            'dev_requirement' => true,
+            'dev_requirement' => false,
         ),
         'psr/http-client-implementation' => array(
-            'dev_requirement' => true,
+            'dev_requirement' => false,
             'provided' => array(
                 0 => '1.0',
             ),
@@ -188,7 +188,7 @@
             'install_path' => __DIR__ . '/../psr/log',
             'aliases' => array(),
             'reference' => 'fe5ea303b0887d5caefd3d431c3e61ad47037001',
-            'dev_requirement' => true,
+            'dev_requirement' => false,
         ),
         'sebastian/cli-parser' => array(
             'pretty_version' => '1.0.1',
@@ -341,7 +341,7 @@
             'install_path' => __DIR__ . '/../symfony/browser-kit',
             'aliases' => array(),
             'reference' => 'e270297dbee59168274c2b535ab1bccd593e6ffe',
-            'dev_requirement' => true,
+            'dev_requirement' => false,
         ),
         'symfony/css-selector' => array(
             'pretty_version' => 'v6.3.2',
@@ -350,7 +350,7 @@
             'install_path' => __DIR__ . '/../symfony/css-selector',
             'aliases' => array(),
             'reference' => '883d961421ab1709877c10ac99451632a3d6fa57',
-            'dev_requirement' => true,
+            'dev_requirement' => false,
         ),
         'symfony/deprecation-contracts' => array(
             'pretty_version' => 'v3.3.0',
@@ -359,7 +359,7 @@
             'install_path' => __DIR__ . '/../symfony/deprecation-contracts',
             'aliases' => array(),
             'reference' => '7c3aff79d10325257a001fcf92d991f24fc967cf',
-            'dev_requirement' => true,
+            'dev_requirement' => false,
         ),
         'symfony/dom-crawler' => array(
             'pretty_version' => 'v6.3.4',
@@ -368,7 +368,7 @@
             'install_path' => __DIR__ . '/../symfony/dom-crawler',
             'aliases' => array(),
             'reference' => '3fdd2a3d5fdc363b2e8dbf817f9726a4d013cbd1',
-            'dev_requirement' => true,
+            'dev_requirement' => false,
         ),
         'symfony/finder' => array(
             'pretty_version' => 'v6.3.5',
@@ -386,7 +386,7 @@
             'install_path' => __DIR__ . '/../symfony/http-client',
             'aliases' => array(),
             'reference' => '0314e2d49939a9831929d6fc81c01c6df137fd0a',
-            'dev_requirement' => true,
+            'dev_requirement' => false,
         ),
         'symfony/http-client-contracts' => array(
             'pretty_version' => 'v3.3.0',
@@ -395,10 +395,10 @@
             'install_path' => __DIR__ . '/../symfony/http-client-contracts',
             'aliases' => array(),
             'reference' => '3b66325d0176b4ec826bffab57c9037d759c31fb',
-            'dev_requirement' => true,
+            'dev_requirement' => false,
         ),
         'symfony/http-client-implementation' => array(
-            'dev_requirement' => true,
+            'dev_requirement' => false,
             'provided' => array(
                 0 => '3.0',
             ),
@@ -410,7 +410,7 @@
             'install_path' => __DIR__ . '/../symfony/mime',
             'aliases' => array(),
             'reference' => 'd5179eedf1cb2946dbd760475ebf05c251ef6a6e',
-            'dev_requirement' => true,
+            'dev_requirement' => false,
         ),
         'symfony/polyfill-ctype' => array(
             'pretty_version' => 'v1.28.0',
@@ -419,7 +419,7 @@
             'install_path' => __DIR__ . '/../symfony/polyfill-ctype',
             'aliases' => array(),
             'reference' => 'ea208ce43cbb04af6867b4fdddb1bdbf84cc28cb',
-            'dev_requirement' => true,
+            'dev_requirement' => false,
         ),
         'symfony/polyfill-intl-idn' => array(
             'pretty_version' => 'v1.28.0',
@@ -428,7 +428,7 @@
             'install_path' => __DIR__ . '/../symfony/polyfill-intl-idn',
             'aliases' => array(),
             'reference' => 'ecaafce9f77234a6a449d29e49267ba10499116d',
-            'dev_requirement' => true,
+            'dev_requirement' => false,
         ),
         'symfony/polyfill-intl-normalizer' => array(
             'pretty_version' => 'v1.28.0',
@@ -437,7 +437,7 @@
             'install_path' => __DIR__ . '/../symfony/polyfill-intl-normalizer',
             'aliases' => array(),
             'reference' => '8c4ad05dd0120b6a53c1ca374dca2ad0a1c4ed92',
-            'dev_requirement' => true,
+            'dev_requirement' => false,
         ),
         'symfony/polyfill-mbstring' => array(
             'pretty_version' => 'v1.28.0',
@@ -446,7 +446,7 @@
             'install_path' => __DIR__ . '/../symfony/polyfill-mbstring',
             'aliases' => array(),
             'reference' => '42292d99c55abe617799667f454222c54c60e229',
-            'dev_requirement' => true,
+            'dev_requirement' => false,
         ),
         'symfony/polyfill-php72' => array(
             'pretty_version' => 'v1.28.0',
@@ -455,7 +455,7 @@
             'install_path' => __DIR__ . '/../symfony/polyfill-php72',
             'aliases' => array(),
             'reference' => '70f4aebd92afca2f865444d30a4d2151c13c3179',
-            'dev_requirement' => true,
+            'dev_requirement' => false,
         ),
         'symfony/service-contracts' => array(
             'pretty_version' => 'v3.3.0',
@@ -464,7 +464,7 @@
             'install_path' => __DIR__ . '/../symfony/service-contracts',
             'aliases' => array(),
             'reference' => '40da9cc13ec349d9e4966ce18b5fbcd724ab10a4',
-            'dev_requirement' => true,
+            'dev_requirement' => false,
         ),
         'theseer/tokenizer' => array(
             'pretty_version' => '1.2.1',

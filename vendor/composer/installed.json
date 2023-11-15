@@ -3312,8 +3312,6 @@
     "dev": true,
     "dev-package-names": [
         "doctrine/instantiator",
-        "fabpot/goutte",
-        "masterminds/html5",
         "myclabs/deep-copy",
         "nikic/php-parser",
         "phar-io/manifest",
@@ -3324,8 +3322,6 @@
         "phpunit/php-text-template",
         "phpunit/php-timer",
         "phpunit/phpunit",
-        "psr/container",
-        "psr/log",
         "sebastian/cli-parser",
         "sebastian/code-unit",
         "sebastian/code-unit-reverse-lookup",
@@ -3342,19 +3338,6 @@
         "sebastian/resource-operations",
         "sebastian/type",
         "sebastian/version",
-        "symfony/browser-kit",
-        "symfony/css-selector",
-        "symfony/deprecation-contracts",
-        "symfony/dom-crawler",
-        "symfony/http-client",
-        "symfony/http-client-contracts",
-        "symfony/mime",
-        "symfony/polyfill-ctype",
-        "symfony/polyfill-intl-idn",
-        "symfony/polyfill-intl-normalizer",
-        "symfony/polyfill-mbstring",
-        "symfony/polyfill-php72",
-        "symfony/service-contracts",
         "theseer/tokenizer"
     ]
 }
