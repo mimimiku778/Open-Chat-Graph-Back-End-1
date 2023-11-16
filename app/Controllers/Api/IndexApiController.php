@@ -8,6 +8,6 @@ class IndexApiController
 {
     public function index()
     {
-        pre_var_dump($_FILES);
+        return response(['test' => 'OK']);
     }
 }

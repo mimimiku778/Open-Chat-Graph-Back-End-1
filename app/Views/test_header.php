@@ -18,7 +18,7 @@
             <a href="<?php echo url() ?>">HOME</a>
             <ul>
                 <li>
-                    <a href="/image">Image Uploader</a>
+                    <span>test</span>
                 </li>
             </ul>
         </nav>

@@ -3,14 +3,10 @@
 namespace App\Config;
 
 use Shadow\Kernel\Route;
-use App\Middleware\VerifyCsrfToken;
-
-Route::path('image/store@post')
-    ->matchFile('file', ['image/jpeg', 'image/png', 'image/gif', 'image/webp'], emptyAble: false)
-    ->matchStr('imageType', regex: '/(jpeg|png|webp)/')
-    ->matchNum('imageSize', min: 0, max: 1000)
-    ->fails(redirect('image'));
 
 Route::path('@get@post');
+
+Route::path('test');
+    //->matchStr('key', regex: "/^33c5f49c9ce7393a2c34462bb1179$/");
 
 Route::run();

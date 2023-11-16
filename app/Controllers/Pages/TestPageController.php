@@ -4,35 +4,42 @@ declare(strict_types=1);
 
 namespace App\Controllers\Pages;
 
+use App\Models\current_ranking;
+use App\Services\OpenChat\Crawler\OpenChatApiRankingDownloader;
+use App\Config\AppConfig;
+
 class TestPageController
 {
-    function unzip()
+    private array $data;
+
+    function index(OpenChatApiRankingDownloader $api)
     {
-        $zipFile = __DIR__ . '/../../../storage/img_backup/oc-img/2023-11-16.zip';
-        $extractTo =  __DIR__ . '/../../../public/oc-img/';
+        foreach (AppConfig::OPEN_CHAT_CATEGORY as $c) {
+            $this->data = [];
 
-        // ディレクトリを解凍する
-        $unzipDirectory = function ($zipFile, $extractTo) {
-            $zip = new \ZipArchive();
+            $api->fetchOpenChatApiRanking((string)$c, function ($apiData) {
+                $squares = $apiData['squaresByCategory'][0]['squares'];
+                array_push($this->data, ...array_map(fn ($el) => $el['square']['emid'], $squares));
+            });
 
-            $res = $zip->open($zipFile);
+            $cr = new current_ranking;
+            $diff = [];
 
-            if ($res === true) {
-                $zip->extractTo($extractTo);
-                $zip->close();
-                return true;
-            } else {
-                return false;
+            if ($cr->find("SELECT * FROM current_ranking WHERE category = {$c}")) {
+                $recentData = unserialize($cr->data);
+                $diff = array_filter($this->data, fn ($emid) => !in_array($emid, $recentData));
             }
-        };
 
+            if($diff) {
+                $cr->insert('ranking_history');
+            }
 
-        $result = $unzipDirectory($zipFile, $extractTo);
+            $cr->category = $c;
+            $cr->data = serialize($this->data);
+            $cr->time = date('Y-m-d H:i:s');
+            $cr->insertUpdate();
 
-        if ($result) {
-            echo 'ディレクトリの解凍が成功しました。';
-        } else {
-            echo 'ディレクトリの解凍に失敗しました。';
+            pre_var_dump($cr->category);
         }
     }
 }
