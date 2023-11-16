@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace App\Controllers\Pages;
+namespace App\Controllers\Api;
 
 use App\Models\current_ranking;
 use App\Services\OpenChat\Crawler\OpenChatApiRankingDownloader;
 use App\Config\AppConfig;
 
-class TestPageController
+class TestApiController
 {
     private array $data;
 
@@ -33,7 +33,7 @@ class TestPageController
                 $diff = array_filter($this->data, fn ($emid) => !in_array($emid, $recentData));
             }
 
-            if($diff) {
+            if ($diff) {
                 $cr->insert('ranking_history');
             }
 

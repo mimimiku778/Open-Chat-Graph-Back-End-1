@@ -3,9 +3,11 @@
 namespace App\Config;
 
 use Shadow\Kernel\Route;
+use App\Config\AdminConfig;
 
 Route::path('@get@post');
 
-Route::path('test')->matchStr('key', regex: "/^33c5f49c9ce7393a2c34462bb1179$/");
+Route::path('test@put')
+    ->matchStr('key', regex: ("/^" . AdminConfig::ADMIN_API_KEY . "$/"));
 
 Route::run();
