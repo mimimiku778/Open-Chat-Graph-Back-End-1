@@ -15,7 +15,7 @@ class TestApiController
     function index(OpenChatApiRankingDownloader $api)
     {
         echo 'start';
-        fastcgi_finish_request();
+        //fastcgi_finish_request();
 
         foreach (AppConfig::OPEN_CHAT_CATEGORY as $c) {
             $this->data = [];
@@ -26,21 +26,28 @@ class TestApiController
             });
 
             $cr = new current_ranking;
-            $diff = [];
 
-            if ($cr->find("SELECT * FROM current_ranking WHERE category = {$c}")) {
-                $recentData = unserialize($cr->data);
-                $diff = array_filter($this->data, fn ($emid) => !in_array($emid, $recentData));
-            }
-
-            if ($diff) {
+            if (
+                $cr->find("SELECT * FROM current_ranking WHERE category = {$c}")
+                && $this->getDiff(unserialize($cr->data))
+            ) {
                 $cr->insert('ranking_history');
             }
+
 
             $cr->category = $c;
             $cr->data = serialize($this->data);
             $cr->time = date('Y-m-d H:i:s');
             $cr->insertUpdate();
         }
+    }
+
+    private function getDiff(array $recentData): bool
+    {
+        $recentData = array_values(array_filter($recentData, fn ($el) => in_array($el, $this->data)));
+        $oldData = array_values(array_filter($this->data, fn ($el) => in_array($el, $recentData)));
+
+        $result = $recentData !== $oldData;
+        return $result;
     }
 }

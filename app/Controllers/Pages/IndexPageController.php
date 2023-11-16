@@ -6,7 +6,6 @@ namespace App\Controllers\Pages;
 
 use App\Config\ConfigJson;
 use App\Views\MetaTags;
-use Shadow\DB;
 
 class IndexPageController
 {

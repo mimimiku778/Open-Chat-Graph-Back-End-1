@@ -6,7 +6,7 @@ namespace App\Controllers\Pages;
 
 class UnzipPageController
 {
-    function unzip()
+    private function unzip()
     {
         $zipFile = __DIR__ . '/../../../storage/img_backup/oc-img/2023-11-16.zip';
         $extractTo =  __DIR__ . '/../../../public/oc-img/';
