@@ -27,18 +27,22 @@ class TestApiController
 
             $cr = new current_ranking;
 
-            if (
-                $cr->find("SELECT * FROM current_ranking WHERE category = {$c}")
-                && $this->getDiff(unserialize($cr->data))
-            ) {
-                $cr->insert('ranking_history');
+            if (!$cr->find("SELECT * FROM current_ranking WHERE category = {$c}")) {
+                $cr->category = $c;
+                $cr->data = serialize($this->data);
+                $cr->time = date('Y-m-d H:i:s');
+                $cr->insert();
+                
+                continue;
             }
 
+            if ($this->getDiff(unserialize($cr->data))) {
+                $cr->insert('ranking_history');
 
-            $cr->category = $c;
-            $cr->data = serialize($this->data);
-            $cr->time = date('Y-m-d H:i:s');
-            $cr->insertUpdate();
+                $cr->data = serialize($this->data);
+                $cr->time = date('Y-m-d H:i:s');
+                $cr->update(['category' => $cr->category]);
+            }
         }
     }
 
@@ -47,7 +51,6 @@ class TestApiController
         $recentData = array_values(array_filter($recentData, fn ($el) => in_array($el, $this->data)));
         $oldData = array_values(array_filter($this->data, fn ($el) => in_array($el, $recentData)));
 
-        $result = $recentData !== $oldData;
-        return $result;
+        return $recentData !== $oldData;
     }
 }
