@@ -15,7 +15,7 @@ class TestApiController
     function index(OpenChatApiRankingDownloader $api)
     {
         echo 'start';
-        //fastcgi_finish_request();
+        fastcgi_finish_request();
 
         foreach (AppConfig::OPEN_CHAT_CATEGORY as $c) {
             $this->data = [];
