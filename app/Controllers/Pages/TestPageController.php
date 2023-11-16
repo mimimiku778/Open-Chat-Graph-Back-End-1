@@ -14,6 +14,9 @@ class TestPageController
 
     function index(OpenChatApiRankingDownloader $api)
     {
+        echo 'start';
+        fastcgi_finish_request();
+
         foreach (AppConfig::OPEN_CHAT_CATEGORY as $c) {
             $this->data = [];
 
@@ -38,8 +41,6 @@ class TestPageController
             $cr->data = serialize($this->data);
             $cr->time = date('Y-m-d H:i:s');
             $cr->insertUpdate();
-
-            pre_var_dump($cr->category);
         }
     }
 }
